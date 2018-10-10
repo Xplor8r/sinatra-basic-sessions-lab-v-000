@@ -6,10 +6,16 @@ class App < Sinatra::Base
     enable :session
     set :session_secret, "super dooper top secret"
   end
+
+  
   get '/' do
+    session["name"]= "item"
+    @session = session
     erb :index
   end
 
-  post '/checkout'
+  post '/checkout' do
+    erb :checkout
+  end
 
 end
