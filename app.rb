@@ -7,7 +7,7 @@ class App < Sinatra::Base
     set :session_secret, "super dooper top secret"
   end
 
-  
+
   get '/' do
     session["name"]= "item"
     @session = session
